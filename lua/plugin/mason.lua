@@ -1,3 +1,4 @@
+local lsp_zero = require('lsp-zero')
 require('mason').setup({
   ui = {
     icons = {
@@ -8,10 +9,21 @@ require('mason').setup({
   },
 })
 
+require('mason-lspconfig').setup({
+  ensure_installed = {},
+  handlers = {
+    lsp_zero.default_setup,
+  },
+})
+
 require('mason-tool-installer').setup({
   ensure_installed = {
     'lua-language-server',
     'stylua',
+    'prettier',
+    'eslint-lsp',
     'clangd',
+    'rust-analyzer',
+    'typescript-language-server',
   },
 })
