@@ -25,5 +25,8 @@ require('mason-tool-installer').setup({
     'clangd',
     'rust-analyzer',
     'typescript-language-server',
+    'cmake-language-server',
+    'intelephense',
+    'pyright',
   },
 })
